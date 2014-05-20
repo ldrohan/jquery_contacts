@@ -35,8 +35,9 @@ $('ul').on('click', '.delete', function(){
 	  
   });
 
-$( "#update" ).click(function() {
+$( "#update" ).click(function(e) {
   // this doesnt work yet
+  e.preventDefault();
   var name = $('#name').val();
   			var name = $('#edname').val();
 				var phone = $('#edphone').val();
