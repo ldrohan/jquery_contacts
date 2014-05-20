@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	 $('.editform').hide();
-	$('input').keypress(function(e){
-		if(e.which == 13){
+	$('#submit').click(function(e){
+		
 			e.preventDefault();
 				var name = $('#name').val();
 				var phone = $('#phone').val();
@@ -11,7 +11,7 @@ $(document).ready(function(){
 				addContact(name,phone,email,image);
 				
 				
-		}; 
+		
 	});
 
 	var addContact = function(name,phone,email,image){
@@ -38,13 +38,15 @@ $('ul').on('click', '.delete', function(){
 $( "#update" ).click(function(e) {
   // this doesnt work yet
   e.preventDefault();
-  var name = $('#name').val();
-  			var name = $('#edname').val();
-				var phone = $('#edphone').val();
-				var email = $('#edemail').val();
-				var image = $('#edimage').val();
+
+    var name = $('#name').val();
+  	var name = $('#edname').val();
+		var phone = $('#edphone').val();
+		var email = $('#edemail').val();
+		var image = $('#edimage').val();
 				
-				addContact(name,phone,email,image);
+		addContact(name,phone,email,image);
+      
 });
 
 });
