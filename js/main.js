@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	 $('.editform').hide();
 	$('input').keypress(function(e){
 		if(e.which == 13){
 			e.preventDefault();
@@ -22,11 +23,27 @@ $('ul').on('click', '.delete', function(){
       $(this).remove();
     });
   });
-$('ul').on('click', '.edit', function(){
+  $('ul').on('click', '.edit', function(){
 
-	$('#edname').val($('#name').val());
-	$('#edphone').val($('#phone').val());
-	$('#edemail').val($('#email').val());
-	$('#edimage').val($('#image').val());
+	  $('#edname').val($('#name').val());
+	  $('#edphone').val($('#phone').val());
+	  $('#edemail').val($('#email').val());
+	  $('#edimage').val($('#image').val());
+
+	  $('.editform').fadeIn(500);
+
+	  
+  });
+
+$( "#update" ).click(function() {
+  // this doesnt work yet
+  var name = $('#name').val();
+  			var name = $('#edname').val();
+				var phone = $('#edphone').val();
+				var email = $('#edemail').val();
+				var image = $('#edimage').val();
+				
+				addContact(name,phone,email,image);
 });
+
 });
